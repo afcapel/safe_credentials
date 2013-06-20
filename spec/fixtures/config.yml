@@ -1,0 +1,21 @@
+development:
+  database:
+    adapter: sqlite3
+    db_user: scott
+    db_password: tiger
+  user: wadus
+  password: secret
+test:
+  database:
+    adapter: sqlite3
+    db_user: scott
+    db_password: tiger
+  user: wadus
+  password: secret
+production:
+  database:
+    adapter: postgresql
+    db_user: scott
+    db_password: tiger
+  user: wadus
+  password: secret

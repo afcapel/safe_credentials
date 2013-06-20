@@ -1,0 +1,22 @@
+---
+development:
+  database:
+    encrypted_adapter: U2FsdGVkX1/+7+ZLqxcnxDwe06l8CwS8HAY8cfFpeQY=
+    encrypted_db_user: U2FsdGVkX18VQzi5P3XfAAmoixK6bGzVsDNzAwl1Ajo=
+    encrypted_db_password: U2FsdGVkX196w5Ct9xZhzpVoTacPg70pQ2bUpL/Iqco=
+  encrypted_user: U2FsdGVkX19CORFfXnIxh7VTL7J5CWrpLdq2fAgKEuE=
+  encrypted_password: U2FsdGVkX1+xamsMYDDVMLOq5jSoS0JrQcNtL2IcsOA=
+test:
+  database:
+    encrypted_adapter: U2FsdGVkX19w9GcGmV7Jh3U221nNw8WLjdbAkr3yiFA=
+    encrypted_db_user: U2FsdGVkX18YQWsQJ9GnaTyPK0aRwS42CbuhEutaEAs=
+    encrypted_db_password: U2FsdGVkX1/eBxmVhmf2RmmZzD2WMQ0Pe8eUQGamJRk=
+  encrypted_user: U2FsdGVkX18rXFzZCaRnKfdmjeNiTegSG9h43B2UO74=
+  encrypted_password: U2FsdGVkX19EFT/I71fdwONxfAkOBVok9tgF3OUf0kY=
+production:
+  database:
+    encrypted_adapter: U2FsdGVkX1/R5d/ET8H9PjUH0jhnPEdfj/XuaORgfjQ=
+    encrypted_db_user: U2FsdGVkX184exEAZE7oTPkB2N0oDeskyGD52aJr3zI=
+    encrypted_db_password: U2FsdGVkX1/ikJtE7VHZlkNufe/6UGsO+T51mnqJuvE=
+  encrypted_user: U2FsdGVkX18IPO/BNBSg+FVLOAeuSS7hObLOqL6Z+nY=
+  encrypted_password: U2FsdGVkX18L5ZjBRvnt0deVWcmNa26ZkCKJ4ueNWmQ=

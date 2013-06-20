@@ -1,0 +1,3 @@
+module SafeCredentials
+  VERSION = "0.0.1"
+end
