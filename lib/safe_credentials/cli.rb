@@ -8,9 +8,8 @@ class SafeCredentialsCLI < Thor
   option :to, desc: 'target file', default: 'config/encrypted_config.yml'
   option :vars, desc: 'glob expression with the keys to encode', default: '*'
   def encrypt
-
-    puts  "  Encrypting file #{options[:from]}"
-    print "  Enter your password: "
+    puts  "Encrypting file #{options[:from]}"
+    print "Enter your password: "
     password = STDIN.noecho(&:gets)
     puts ''
 
@@ -19,7 +18,7 @@ class SafeCredentialsCLI < Thor
     config.encrypt!(options[:vars])
     config.save(options[:to])
 
-    puts "  Result stored in #{options[:to]}"
+    puts "Config file stored in #{options[:to]}"
     add_to_gitignore(options[:from])
     puts  ""
   end
@@ -30,8 +29,8 @@ class SafeCredentialsCLI < Thor
   option :vars, desc: 'glob expression with the keys to decode', default: '**encrypted_*'
   def decrypt
     puts  ""
-    puts  "  Decrypting file #{options[:from]}"
-    print "  Enter your password: "
+    puts  "Decrypting file #{options[:from]}"
+    print "Enter your password: "
     password = STDIN.noecho(&:gets)
     puts ''
 
@@ -40,9 +39,9 @@ class SafeCredentialsCLI < Thor
     config.decrypt!(options[:vars])
     config.save(options[:to])
 
-    puts "  Result stored in #{options[:to]}"
+    puts "Encrypted file stored in #{options[:to]}"
     add_to_gitignore(options[:to])
-     puts  ""
+    puts  ""
   end
 
 
@@ -51,10 +50,10 @@ class SafeCredentialsCLI < Thor
   def add_to_gitignore(config_file)
     return unless File.exist?('.gitignore') && !File.read('.gitignore').match(config_file)
 
-    puts "  Adding #{config_file} to .gitignore."
+    puts "Adding #{config_file} to .gitignore."
 
     File.open('.gitignore', 'a') do |f|
-      f << "#{config_file}\n"
+      f << "\n#{config_file}\n"
     end
   end
 end
