@@ -33,7 +33,7 @@ module SafeCredentials
       Hash.new.tap do |decrypted|
         h.each do |k, v|
           key = k.sub(/^encrypted_/, '')
-          decrypted[key] = decrypt_val(v)
+          decrypted[key] = decrypt_val(v) if v
         end
       end
     end
@@ -46,7 +46,8 @@ module SafeCredentials
       last_key, subhash = subhash_for(path)
       new_key = "encrypted_#{last_key}"
 
-      subhash[new_key] = encrypt_val(subhash.delete(last_key))
+      val = subhash.delete(last_key)
+      subhash[new_key] = encrypt_val(val) if val
     end
 
     def decrypt!(path)
